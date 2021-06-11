@@ -1,7 +1,7 @@
 {
   "name": "uni-campus",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "custom uni components",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -9,7 +9,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "uni-app",
+    "vue"
+  ],
   "author": "",
   "license": "ISC"
 }
