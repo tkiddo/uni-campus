@@ -10070,10 +10070,10 @@ unbox-primitive@^1.0.1:
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
 
-uni-campus@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/uni-campus/-/uni-campus-1.0.1.tgz#45f263f9fc8889fb32910a0f95314f10e7626036"
-  integrity sha512-de5jdGdDro+MpkiJ859/QOAH/ZXl3ZFLLEzJU1wX5AOIO/z8ktpsHvM3jKWSlw5A4FzmMNl72z2Oh/3T33mW7w==
+uni-campus@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/uni-campus/-/uni-campus-1.0.3.tgz#323404ccf2069ac4d4dd8778d4c09b6ce1922f0d"
+  integrity sha512-cKNyo03BmDJ3RJZ02CPYY8V8Iw+5jHsIHTUmE+6ZAbaskmHQNMwIbIxN05w7b0eG/hhsPdsV4a4tp6wOQK+GZw==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"

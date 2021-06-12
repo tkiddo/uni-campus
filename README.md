@@ -1,19 +1,24 @@
-# uni-components
+# uni-campus
 
-## Project setup
-```
-yarn install
-```
+## 安装
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+```Shell
+yarn add uni-campus --save
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+## 使用
+
+```Shell
+import SubmitButton from 'uni-campus/lib/submit-button.vue'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 组件
+
+- SubmitButton
+
+更新日志
+
+## 2021/06/12
+
+- SubmitButton 支持自定义样式
+- SubmitButton 支持自定义 loading 图标

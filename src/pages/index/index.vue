@@ -1,6 +1,10 @@
 <template>
   <view class="content">
-    <submit-button :loading="submitLoading" @submit="handleSubmit" class="submit-btn"
+    <submit-button
+      :loading="submitLoading"
+      @submit="handleSubmit"
+      :styles="styleObject"
+      loadingIcon="/static/icons/loading.png"
       >Submit</submit-button
     >
   </view>
@@ -15,7 +19,12 @@ export default {
   },
   data() {
     return {
-      submitLoading: false
+      submitLoading: false,
+      styleObject: {
+        width: '300px',
+        height: '60px',
+        background: 'orange'
+      }
     };
   },
   onLoad() {},
@@ -31,8 +40,4 @@ export default {
 };
 </script>
 
-<style>
-.submit-btn {
-  width: 200rpx;
-}
-</style>
+<style lang="scss"></style>
