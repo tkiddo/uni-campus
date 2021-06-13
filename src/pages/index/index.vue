@@ -2,6 +2,7 @@
   <view class="content">
     <submit-button
       :loading="submitLoading"
+      :disabled="submitLoading"
       @submit="handleSubmit"
       :styles="styleObject"
       loadingIcon="/static/icons/loading.png"
@@ -11,33 +12,33 @@
 </template>
 
 <script>
-// import SubmitButton from '../../packages/lib/submit-button.vue';
-import SubmitButton from 'uni-campus/lib/submit-button.vue';
-export default {
-  components: {
-    SubmitButton
-  },
-  data() {
-    return {
-      submitLoading: false,
-      styleObject: {
-        width: '300px',
-        height: '60px',
-        background: 'orange'
+  import SubmitButton from '../../packages/lib/submit-button.vue'
+  // import SubmitButton from 'uni-campus/lib/submit-button.vue'
+  export default {
+    components: {
+      SubmitButton,
+    },
+    data() {
+      return {
+        submitLoading: false,
+        styleObject: {
+          width: '300px',
+          height: '60px',
+          background: 'orange',
+        },
       }
-    };
-  },
-  onLoad() {},
-  methods: {
-    handleSubmit() {
-      this.submitLoading = true;
-      setTimeout(() => {
-        console.log('finish');
-        this.submitLoading = false;
-      }, 1000);
-    }
+    },
+    onLoad() {},
+    methods: {
+      handleSubmit() {
+        this.submitLoading = true
+        setTimeout(() => {
+          console.log('finish')
+          this.submitLoading = false
+        }, 1000)
+      },
+    },
   }
-};
 </script>
 
 <style lang="scss"></style>
