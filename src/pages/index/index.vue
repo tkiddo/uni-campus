@@ -33,7 +33,6 @@
       handleSubmit() {
         this.submitLoading = true
         setTimeout(() => {
-          console.log('finish')
           this.submitLoading = false
         }, 1000)
       },

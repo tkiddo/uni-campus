@@ -1,3 +1,3 @@
-import SubmitButton from './lib/submit-button.vue';
+import SubmitButton from './lib/submit-button.vue'
 
-export { SubmitButton };
+export { SubmitButton }
