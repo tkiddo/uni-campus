@@ -12,13 +12,13 @@ yarn add uni-campus --save
 import SubmitButton from 'uni-campus/lib/submit-button.vue'
 ```
 
-## 组件
+## 文档
 
-- SubmitButton
+[点击查看文档]()
 
-更新日志
+## 更新日志
 
-## 2021/06/12
+#### 2021/06/12
 
 - SubmitButton 支持自定义样式
 - SubmitButton 支持自定义 loading 图标
