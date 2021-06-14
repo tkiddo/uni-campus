@@ -41,7 +41,9 @@
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "eslint": "eslint src --ext .js,.vue src"
+    "eslint": "eslint src --ext .js,.vue src",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31920210609001",
@@ -97,7 +99,8 @@
     "prettier": "^2.3.1",
     "sass": "1.34.0",
     "sass-loader": "10.1.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.8.2"
   },
   "pre-commit": [
     "precommit-msg",
