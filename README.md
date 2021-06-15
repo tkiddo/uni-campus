@@ -22,3 +22,7 @@ import SubmitButton from 'uni-campus/lib/submit-button.vue'
 
 - submit-button 支持自定义样式
 - submit-button 支持自定义 loading 图标
+
+#### 2021/06/15
+
+- 增加自定义 toast
