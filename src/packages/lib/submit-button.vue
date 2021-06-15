@@ -1,6 +1,6 @@
 <template>
   <view
-    class="btn-wrapper"
+    class="submit-button-wrapper"
     @click="handleClick"
     :style="{
       width: styles.width || '200px',
@@ -62,18 +62,18 @@
 </script>
 
 <style lang="scss">
-  .btn-wrapper {
+  .submit-button-wrapper {
     padding: 10rpx 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .loading-icon {
-    width: 40rpx;
-    height: 40rpx;
-    margin-right: 20rpx;
-    animation: rotate 1s linear infinite;
+    .loading-icon {
+      width: 40rpx;
+      height: 40rpx;
+      margin-right: 20rpx;
+      animation: rotate 1s linear infinite;
+    }
   }
 
   @keyframes rotate {

@@ -20,5 +20,5 @@ import SubmitButton from 'uni-campus/lib/submit-button.vue'
 
 #### 2021/06/12
 
-- SubmitButton 支持自定义样式
-- SubmitButton 支持自定义 loading 图标
+- submit-button 支持自定义样式
+- submit-button 支持自定义 loading 图标

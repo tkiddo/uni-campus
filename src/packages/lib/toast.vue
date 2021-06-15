@@ -1,10 +1,10 @@
 <template>
-  <div class="toast-container" v-if="isShow">
-    <div class="content">
-      <img :class="type" :src="toastIcon" v-if="toastIcon" />
+  <view class="toast-container" v-if="isShow">
+    <view class="content">
+      <img :class="type" :src="icon" v-if="icon" />
       <span :class="size">{{ title }}</span>
-    </div>
-  </div>
+    </view>
+  </view>
 </template>
 
 <script>
@@ -19,10 +19,10 @@
     data() {
       return {
         isShow: false,
-        toastIcon: '',
+        icon: '',
         size: 'small',
         title: '',
-        type: '',
+        type: 'normal',
         timer: null,
       }
     },
@@ -31,35 +31,38 @@
         clearTimeout(this.timer)
         this.timer = null
       }
+      this.hide()
     },
     methods: {
       show(options) {
         const { title, duration, icon, type, size } = options
         this.isShow = true
         this.title = title
-        this.toastIcon = iconMap[icon]
+        this.icon = iconMap[icon] || icon
         this.type = type
         this.size = size === 'small' || size === 'large' ? size : 'small'
-        this.timer = setTimeout(
-          () => {
-            this.hide()
-          },
-          /(^[1-9]\d*$)/.test(duration) ? duration : 500
-        )
+        if (this.type !== 'loading') {
+          this.timer = setTimeout(
+            () => {
+              this.hide()
+            },
+            /(^[1-9]\d*$)/.test(duration) ? duration : 500
+          )
+        }
       },
       hide() {
         this.isShow = false
-        this.toastIcon = ''
+        this.icon = ''
         this.size = 'small'
         this.title = ''
-        this.type = ''
+        this.type = 'normal'
         this.timer = null
       },
     },
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .toast-container {
     position: fixed;
     left: 0;
@@ -71,57 +74,57 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .content {
-    background: rgba(27, 28, 51, 0.9);
-    border-radius: 12rpx;
-    // height: 240rpx;
-    min-width: 240rpx;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 48rpx;
-    box-sizing: border-box;
-  }
-  img {
-    width: 52rpx;
-    height: 52rpx;
-    margin-bottom: 30rpx;
-  }
-  span {
-    color: white;
-    font-size: 28rpx;
-    line-height: 44rpx;
-    text-align: center;
-    text-overflow: -o-ellipsis-lastline;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-  }
-  .small {
-    font-size: 28rpx;
-    line-height: 44rpx;
-  }
-  .large {
-    font-size: 72rpx;
-    line-height: 72rpx;
-  }
-  .loading {
-    animation: loading-rotate 1s linear infinite;
-  }
-  @keyframes loading-rotate {
-    0% {
-      -webkit-transform: rotate(0deg);
+    .content {
+      background: rgba(27, 28, 51, 0.9);
+      border-radius: 12rpx;
+      // height: 240rpx;
+      min-width: 240rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 48rpx;
+      box-sizing: border-box;
     }
-    50% {
-      -webkit-transform: rotate(180deg);
+    img {
+      width: 52rpx;
+      height: 52rpx;
+      margin-bottom: 30rpx;
     }
-    100% {
-      -webkit-transform: rotate(360deg);
+    span {
+      color: white;
+      font-size: 28rpx;
+      line-height: 44rpx;
+      text-align: center;
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      line-clamp: 5;
+      -webkit-box-orient: vertical;
+    }
+    .small {
+      font-size: 28rpx;
+      line-height: 44rpx;
+    }
+    .large {
+      font-size: 72rpx;
+      line-height: 72rpx;
+    }
+    .loading {
+      animation: loading-rotate 1s linear infinite;
+    }
+    @keyframes loading-rotate {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      50% {
+        -webkit-transform: rotate(180deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
     }
   }
 </style>

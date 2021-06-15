@@ -14,7 +14,8 @@ import SubmitButton from 'uni-campus/lib/submit-button.vue'
 
 ## 组件
 
-- [SubmitButton](/SubmitButton.md)
+- [submit-button](/submit-button.md)
+- [toast](/toast.md)
 
 ## 更新日志
 
