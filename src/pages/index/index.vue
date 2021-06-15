@@ -8,6 +8,7 @@
       loadingIcon="/static/icons/loading.png"
       >Submit</submit-button
     >
+    <toast ref="toast"></toast>
   </view>
 </template>
 
@@ -34,6 +35,10 @@
         this.submitLoading = true
         setTimeout(() => {
           this.submitLoading = false
+          this.$refs.toast.show({
+            title: '成功了',
+            icon: 'success',
+          })
         }, 1000)
       },
     },

@@ -14,7 +14,7 @@ import SubmitButton from 'uni-campus/lib/submit-button.vue'
 
 ## 文档
 
-[点击查看文档]()
+[点击查看文档](https://tkiddo.github.io/uni-campus/)
 
 ## 更新日志
 
