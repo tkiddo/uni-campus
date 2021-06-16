@@ -3,6 +3,10 @@ import App from './App'
 // import toast from './packages/lib/toast.vue'
 import toast from 'uni-campus/lib/toast.vue'
 
+import { debounce } from '@/utils'
+
+Vue.prototype.debounce = debounce
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'

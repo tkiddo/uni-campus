@@ -17,14 +17,18 @@
         <textarea placeholder="请输入说明" class="txt"></textarea>
       </view>
     </view>
+    <view>{{ count }}</view>
+    <button @click="handleClick">debounce</button>
   </view>
 </template>
 
 <script>
+  import { debounce } from '@/utils'
   export default {
     data() {
       return {
         ios: false,
+        count: 0,
       }
     },
     mounted() {
@@ -35,6 +39,11 @@
       } else if (sys.platform === 'android') {
         this.ios = false
       }
+    },
+    methods: {
+      handleClick: debounce(function () {
+        this.count++
+      }),
     },
   }
 </script>
