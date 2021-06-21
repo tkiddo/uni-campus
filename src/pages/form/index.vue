@@ -18,12 +18,11 @@
       </view>
     </view>
     <view>{{ count }}</view>
-    <button @click="handleClick">debounce</button>
+    <button @click="debounce($event, handleClick)">debounce</button>
   </view>
 </template>
 
 <script>
-  import { debounce } from '@/utils'
   export default {
     data() {
       return {
@@ -41,9 +40,9 @@
       }
     },
     methods: {
-      handleClick: debounce(function () {
+      handleClick: function () {
         this.count++
-      }),
+      },
     },
   }
 </script>

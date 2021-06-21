@@ -3,9 +3,9 @@ import App from './App'
 // import toast from './packages/lib/toast.vue'
 import toast from 'uni-campus/lib/toast.vue'
 
-import { debounce } from '@/utils'
+import debounce from './plugins/debounce'
 
-Vue.prototype.debounce = debounce
+Vue.use(debounce)
 
 Vue.config.productionTip = false
 
