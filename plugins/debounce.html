@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>toast</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/uni-campus/assets/css/0.styles.56b85a17.css" as="style"><link rel="preload" href="/uni-campus/assets/js/app.a7ca1f4b.js" as="script"><link rel="preload" href="/uni-campus/assets/js/2.0ea4b89e.js" as="script"><link rel="preload" href="/uni-campus/assets/js/10.4014d2f1.js" as="script"><link rel="prefetch" href="/uni-campus/assets/js/3.057f59d0.js"><link rel="prefetch" href="/uni-campus/assets/js/4.3cd04ae1.js"><link rel="prefetch" href="/uni-campus/assets/js/5.51e3296a.js"><link rel="prefetch" href="/uni-campus/assets/js/6.d5a62e07.js"><link rel="prefetch" href="/uni-campus/assets/js/7.3fa3eb22.js"><link rel="prefetch" href="/uni-campus/assets/js/8.f6a900e9.js"><link rel="prefetch" href="/uni-campus/assets/js/9.2ae537d3.js">
+    <link rel="stylesheet" href="/uni-campus/assets/css/0.styles.56b85a17.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/uni-campus/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="toast"><a href="#toast" class="header-anchor">#</a> toast</h1> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> debounce <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'uni-campus/plugins'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>debounce<span class="token punctuation">)</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>{{count}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>debounce($event, handleClick)<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>debounce<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">handleClick</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="debounce-传参"><a href="#debounce-传参" class="header-anchor">#</a> debounce 传参</h2> <table><thead><tr><th>参数名</th> <th style="text-align:center;">说明</th> <th>类型</th> <th>默认值</th></tr></thead> <tbody><tr><td>event</td> <td style="text-align:center;">事件，传$event 即可</td> <td>事件</td> <td>无</td></tr> <tr><td>fn</td> <td style="text-align:center;">要执行的函数</td> <td>function</td> <td>无</td></tr> <tr><td>wait</td> <td style="text-align:center;">等待时间</td> <td>number</td> <td>1000</td></tr> <tr><td>immediate</td> <td style="text-align:center;">是否立即执行</td> <td>boolean</td> <td>true</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/uni-campus/assets/js/app.a7ca1f4b.js" defer></script><script src="/uni-campus/assets/js/2.0ea4b89e.js" defer></script><script src="/uni-campus/assets/js/10.4014d2f1.js" defer></script>
+  </body>
+</html>
