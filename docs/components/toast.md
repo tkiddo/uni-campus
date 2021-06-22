@@ -11,7 +11,11 @@
 </template>
 
 <script>
+  import toast from 'uni-campus/lib/toast.vue'
   export default {
+    components: {
+      toast,
+    },
     methods: {
       show() {
         this.$refs.toast.show({

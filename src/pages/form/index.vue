@@ -18,7 +18,8 @@
       </view>
     </view>
     <view>{{ count }}</view>
-    <button @click="debounce($event, handleClick)">debounce</button>
+    <button @click="debounce($event, handleClick)" id="btn1">debounce</button>
+    <button @click="debounce($event, handleTwo)" id="btn2">two</button>
   </view>
 </template>
 
@@ -42,6 +43,9 @@
     methods: {
       handleClick: function () {
         this.count++
+      },
+      handleTwo() {
+        console.log('two')
       },
     },
   }
