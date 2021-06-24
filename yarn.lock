@@ -11392,10 +11392,10 @@ unbox-primitive@^1.0.1:
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
 
-uni-campus@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/uni-campus/-/uni-campus-1.1.5.tgz#cc585e18229dd19050dd8744ce61e3d950410a90"
-  integrity sha512-CQnDUC3ZpoS1WySuT046lKBro0EmDkfSgqYVXNkoaXV/I/Ee0wbk4QK/6yoKVJxhJgxuCajjqGzFLYCraVdQmQ==
+uni-campus@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/uni-campus/-/uni-campus-1.1.7.tgz#04d0fb53b7e03c7e102bef6b9135a4ad94a9138e"
+  integrity sha512-Sbj41XtXqhcm1mSOgAoz5ZErnLR6BtdkocpDS4atDYxN4qwl1+WVUgzPG8wBiWG141SSKxPZdxLlne4pnt1+uA==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -11635,6 +11635,11 @@ uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.nlark.com/uuid/download/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
+
+uview-ui@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/uview-ui/-/uview-ui-1.8.4.tgz#e32bbf2379421d319022e324e1cb7b5387d3bd44"
+  integrity sha512-Zr+D5dFdNy6CdHQLBEXeGq/w0LkjxzBtsgaaDwLl0P58g67H7fBBDvy6AzWK/k0c7dwPYMBiK7I4Tr9p92+0DA==
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"

@@ -14,7 +14,7 @@
 
 <script>
   // import SubmitButton from '../../packages/lib/submit-button.vue'
-  import SubmitButton from 'uni-campus/lib/submit-button.vue'
+  import SubmitButton from 'uni-campus/components/submit-button.vue'
   export default {
     components: {
       SubmitButton,

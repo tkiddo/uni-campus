@@ -17,6 +17,7 @@
         <textarea placeholder="请输入说明" class="txt"></textarea>
       </view>
     </view>
+    <u-field v-model="mobile" label="手机号" placeholder="请填写手机号" type="textarea"></u-field>
     <view>{{ count }}</view>
     <button @click="debounce($event, handleClick)" id="btn1">debounce</button>
     <button @click="debounce($event, handleTwo)" id="btn2">two</button>
